@@ -1,9 +1,10 @@
-// Smooth scroll to sections
-document.querySelectorAll('.navbar a').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      target.scrollIntoView({ behavior: 'smooth' });
-    });
-  });
-  
+//Navbar animation
+const navbar = document.querySelector('#navbar');
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 100) {
+    navbar.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+  } else {
+    navbar.style.backgroundColor = 'transparent';
+  }
+});

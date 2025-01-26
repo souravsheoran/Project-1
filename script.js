@@ -33,3 +33,28 @@ window.addEventListener('load', () => {
     fadeIn(leftImage, 500);
     fadeIn(rightImage, 500);
 });
+
+
+// Select the image and create modal dynamically
+const img = document.getElementById('MP');
+const modal = document.createElement('div');
+const modalImg = document.createElement('img');
+
+// Set up modal styles
+modal.classList.add('modal');
+document.body.appendChild(modal);
+
+// Append image to modal
+modal.appendChild(modalImg);
+
+// Open modal with the clicked image
+img.onclick = function() {
+    modal.style.display = 'flex';  // Show modal
+    modalImg.src = img.src;       // Set modal image to clicked image
+};
+
+// Close modal when clicked
+modal.onclick = function() {
+    modal.style.display = 'none';  // Hide modal
+};
+
