@@ -1,0 +1,113 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #222;
+    color: #333;
+}
+
+
+/* Navbar */
+#navbar {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    z-index: 1; 
+    font-size: medium;
+    /* background-color: #333; */
+}
+
+#navbar a {
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#navbar a:hover {
+    background-color: #555; /* Darker hover background */
+    color: #ffa500; /* Orange color on hover */
+}
+
+/* Container Styling */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Header Box Styling */
+.header-box {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.header {
+    font-size: 2.5rem;
+    color: #ffa500;
+    margin: 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Workshops List Styling */
+.workshops-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.workshop-item {
+    background-color: #fff;
+    padding:20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.workshop-item:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.workshop-item h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .header {
+        font-size: 2rem;
+    }
+
+    .workshop-item h2 {
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header {
+        font-size: 1.5rem;
+    }
+
+    .workshop-item h2 {
+        font-size: 1.2rem;
+    }
+}

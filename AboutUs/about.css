@@ -1,0 +1,116 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #121212; /* Dark background */
+  color: #e0e0e0; /* Light text */
+  line-height: 1.6;
+}
+
+/* Navbar */
+#navbar {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  z-index: 1; 
+  font-size: medium;
+  background-color: #222; /* Dark navbar background */
+}
+
+#navbar a {
+  display: block;
+  color: #e0e0e0; /* Light text for links */
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#navbar a:hover {
+  background-color: #333; /* Slightly darker hover background */
+  color: #ffa500; /* Orange hover text */
+}
+
+/* About Section */
+/* About Section */
+.about-section {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.about-intro {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.intro-content {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.intro-image img {
+  max-width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  width: 290px;
+}
+
+.intro-text {
+  flex: 1;
+}
+
+.intro-text h2 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  color: #ffa500; /* Highlighted title color */
+}
+
+.intro-text h4 {
+  font-size: 1.1rem;
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+.intro-text p {
+  text-align: justify;
+  margin-top: 30px;
+  font-size: 1.1rem;
+  color: #e0e0e0;
+}
+
+
+/* Achievements Section */
+.achievements-section {
+  background: #222; /* Dark background */
+  padding: 40px 20px;
+  margin-top: 50px;
+}
+
+.achievements-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #ffa500; /* Orange for section title */
+}
+
+.achievements-list ul {
+  max-width: 800px;
+  margin: auto;
+  list-style: square;
+  padding-left: 20px;
+}
+
+.achievements-list li {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  color: #e0e0e0; /* Light text for list items */
+}

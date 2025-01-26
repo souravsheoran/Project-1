@@ -1,0 +1,129 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Matches the dark tone */
+    color: #f2f2f2; /* Light text color */
+    height: 100vh; /* Full height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: row; /* Side-by-side layout */
+    justify-content: space-between;
+    align-items: stretch;
+    width: 80%; /* Occupies most of the screen width */
+    height: 90vh; /* Occupies most of the screen height */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+    border-radius: 10px;
+    overflow: hidden; /* Prevents content overflow */
+}
+
+.form {
+    width: 50%; /* Equal width for both sections */
+    padding: 30px;
+    background-color: #1e1e1e; /* Slightly lighter dark tone for contrast */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.contact{
+    width:50%;
+    padding: 53px;
+    background-color: #1e1e1e; 
+    flex-direction:column;
+    margin-left: 20px;
+    align-items: center;
+}
+
+h2 {
+    color: #ff9800; /* Accent color */
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+h4 {
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #333; /* Subtle border */
+    border-radius: 8px;
+    background-color: #2a2a2a; /* Input background */
+    color: #fff; /* Input text color */
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #ff9800; /* Accent color for focus */
+}
+
+textarea {
+    resize: none;
+    height: 100px; /* Default height */
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #ff9800; /* Accent button color */
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #e58900; /* Darker hover effect */
+    transform: scale(1.03); /* Slight enlarge */
+}
+
+.contact p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #f2f2f2;
+}
+
+.contact p a {
+    color: #ff9800; /* Accent color for links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact p a:hover {
+    color: #e58900; /* Darker hover effect for links */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stacks sections vertically on smaller screens */
+        height: auto; /* Allows scrolling for smaller screens */
+        width: 90%; /* Adjusts width */
+    }
+
+    .form, .contact {
+        width: 100%; /* Full width for smaller screens */
+        padding: 20px;
+    }
+}

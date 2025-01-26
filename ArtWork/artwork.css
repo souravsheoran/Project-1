@@ -1,0 +1,127 @@
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212; /* Dark background */
+  color: #e0e0e0; /* Light text */
+  line-height: 1.6;
+}
+
+/* Navbar styles */
+#navbar {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  z-index: 1; 
+  font-size: medium;
+  background-color: #333;
+}
+
+#navbar a {
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#navbar a:hover {
+  background-color: #555; /* Darker hover background */
+  color: #ffa500; /* Orange color on hover */
+}
+
+/* Sliding background styles */
+#sliding-background {
+  position: relative;
+  width: 100%;
+  height: 300px; /* Adjust height as needed */
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  animation: slide-animation 10s infinite;
+}
+
+.slide:nth-child(1) {
+  background-image: url('Arts/Art1.jpg'); 
+}
+
+.slide:nth-child(2) {
+  background-image: url('Arts/Art2.jpg'); /* Replace with the actual path */
+  animation-delay: 3.33s; /* Offset timing for smooth transition */
+}
+
+.slide:nth-child(3) {
+  background-image: url('Arts/Art3.jpg'); /* Replace with the actual path */
+  animation-delay: 6.66s; /* Offset timing for smooth transition */
+}
+
+.slide:nth-child(4) {
+  background-image: url('Arts/Art4.jpg'); /* Replace with the actual path */
+  animation-delay: 9.99s; /* Offset timing for smooth transition */
+}
+
+.slide:nth-child(5) {
+  background-image: url('Arts/Art5.jpg'); /* Replace with the actual path */
+  animation-delay: 12.99s; /* Offset timing for smooth transition */
+}
+
+/* Keyframe animation for sliding effect */
+@keyframes slide-animation {
+  0%, 100% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  33% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  66% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+
+/* Artwork Gallery */
+#art-gallery {
+  max-width: 1200px;
+  margin: 50px auto;
+  text-align: center;
+  padding: 20px;
+}
+
+#art-gallery h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #ffa500; /* Highlighted section title */
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 10px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Darker shadow for contrast */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7); /* Enhanced hover effect */
+}

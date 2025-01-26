@@ -67,12 +67,13 @@ video {
 
 #name {
     position: absolute;
-    top: 50%; 
+    top: 60%; 
     right: 100px;
-    width: 1450px; 
+    width: 900px; 
     height: auto;
     transform: translateY(-50%) scale(1); 
     z-index: 1; 
+    padding-left: 10%0;
 }
 
 .magazine {
@@ -124,36 +125,42 @@ video {
     display: flex;
     justify-content: space-between;
     align-items: stretch;
-    gap: 20px; 
+    gap: 20px;
     padding: 20px;
     background-color: #222; /* Dark background for footer */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
 .container > div {
-    flex: 1; 
-    max-width: 30%; 
+    flex: 1;
+    max-width: 30%; /* Default width for larger screens */
     background-color: #333; /* Dark background for each footer box */
     border: 1px solid #444; /* Slightly lighter border */
-    border-radius: 10px; 
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     padding: 20px;
     box-sizing: border-box;
     text-align: center;
     display: flex;
     flex-direction: column;
-    min-height: 300px; 
+    min-height: 300px;
+    transition: transform 0.3s ease;
+}
+
+.container > div:hover {
+    transform: scale(1.05); /* Subtle zoom effect on hover */
 }
 
 .container > div p {
     font-size: 18px;
     font-weight: bold;
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
     color: #e0e0e0; /* Light text for footer headings */
 }
 
 .container > div a {
     display: block;
-    margin-bottom: 5px; 
+    margin-bottom: 5px;
     color: #ffa500; /* Orange color for footer links */
     text-decoration: none;
     transition: color 0.3s ease;
@@ -161,4 +168,41 @@ video {
 
 .container > div a:hover {
     color: #fff; /* White on hover for links */
+}
+
+/* Responsive Styles */
+
+/* For tablets and small desktops */
+@media screen and (max-width: 1024px) {
+    .container > div {
+        max-width: 45%; /* Two columns on medium screens */
+        min-height: 250px; /* Adjust height for smaller screens */
+    }
+}
+
+/* For mobile devices */
+@media screen and (max-width: 768px) {
+    .container {
+        justify-content: center; /* Center the items */
+    }
+    .container > div {
+        max-width: 100%; /* Full width on small screens */
+        margin-bottom: 20px; /* Add spacing between rows */
+    }
+}
+
+/* For extra small devices */
+@media screen and (max-width: 480px) {
+    .container > div {
+        min-height: 200px; /* Reduce height for small devices */
+        padding: 15px; /* Adjust padding */
+    }
+
+    .container > div p {
+        font-size: 16px; /* Smaller font for headings */
+    }
+
+    .container > div a {
+        font-size: 14px; /* Smaller font for links */
+    }
 }
