@@ -123,6 +123,33 @@ video {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
+/* Pop up image */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    display: none; /* Initially hidden */
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .popup.active {
+    display: flex; /* Show when active */
+  }
+  
+  .popup img {
+    max-width: 90%; /* Limit image width */
+    max-height: 80%; /* Limit image height */
+    width: auto; /* Maintain aspect ratio */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  }  
+
 /* Footer Container Css */
 .container {
     display: flex;

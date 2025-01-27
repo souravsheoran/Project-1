@@ -34,27 +34,20 @@ window.addEventListener('load', () => {
     fadeIn(rightImage, 500);
 });
 
+//Pop effect on images
+const gallerImages = document.querySelectorAll('.image-container img');
+const popup = document.getElementById('popup');
+const popupImg = document.getElementById('popup-img');
 
-// Select the image and create modal dynamically
-const img = document.getElementById('MP');
-const modal = document.createElement('div');
-const modalImg = document.createElement('img');
+gallerImages.forEach(image => {
+    image.addEventListener('click', () => {
+        popupImg.src = image.src;   
+        popup.classList.add('active');
+    });
+});
 
-// Set up modal styles
-modal.classList.add('modal');
-document.body.appendChild(modal);
-
-// Append image to modal
-modal.appendChild(modalImg);
-
-// Open modal with the clicked image
-img.onclick = function() {
-    modal.style.display = 'flex';  // Show modal
-    modalImg.src = img.src;       // Set modal image to clicked image
-};
-
-// Close modal when clicked
-modal.onclick = function() {
-    modal.style.display = 'none';  // Hide modal
-};
-
+popup.addEventListener('click', (event) => {
+    if(event.target !== popupImg){
+        popup.classList.remove('active');
+    }
+});
