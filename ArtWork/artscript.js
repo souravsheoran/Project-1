@@ -8,3 +8,20 @@ window.addEventListener("scroll", () => {
     navbar.style.backgroundColor = 'transparent';
   }
 });
+
+const galleryImages = document.querySelectorAll('.gallery img');
+const popup = document.getElementById('popup');
+const popupImg = document.getElementById('popup-img');
+
+galleryImages.forEach(image => {
+  image.addEventListener('click', () => {
+    popupImg.src = image.src;
+    popup.classList.add('active'); // Adds the active class to show the popup
+  });
+});
+
+popup.addEventListener('click', (event) => {
+  if (event.target !== popupImg) {
+    popup.classList.remove('active'); // Removes the active class to hide the popup
+  }
+});
