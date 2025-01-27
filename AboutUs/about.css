@@ -12,33 +12,46 @@ body {
   line-height: 1.6;
 }
 
-/* Navbar */
 #navbar {
   display: flex;
   justify-content: flex-end;
-  width: 100%;
+  width: 98%;
   z-index: 1000; 
   font-size: medium;
   position: fixed;
-  margin-top: -50px;
-  /* background-color: #333; */
+  top: 0;
+  left: 0;
+  padding: 10px 20px;
 }
 
 #navbar a {
-  display: block;
   color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
   text-decoration: none;
-  transition: background-color 0.3s, color 0.3s;
+  padding: 10px 14px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 #navbar a:hover {
-  background-color: #555; /* Darker hover background */
-  color: #ffa500; /* Orange color on hover */
+  background-color: #555; 
+  color: #ffa500; 
 }
 
-/* About Section */
+@media screen and (max-width: 768px) {
+  #navbar {
+      flex-wrap: wrap; 
+      justify-content: center; 
+      padding: 10px;
+  }
+
+  #navbar a {
+      padding: 8px 10px; 
+      font-size: 14px; 
+  }
+}
+
+
 /* About Section */
 .about-section {
   max-width: 1200px;
@@ -46,28 +59,33 @@ body {
   padding: 20px;
 }
 
+/* Ensure proper spacing and column layout for desktop */
 .about-intro {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .intro-content {
   display: flex;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
   gap: 30px;
   align-items: center;
+  justify-content: center; /* Center items horizontally */
 }
 
 .intro-image img {
   max-width: 100%;
   border-radius: 15px;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-  width: 290px;
+  width: 290px; /* Default width for desktop */
 }
 
 .intro-text {
   flex: 1;
+  max-width: 600px; /* Limit text width for better readability */
+  text-align: center; /* Center-align text for smaller screens */
 }
 
 .intro-text h2 {
@@ -77,9 +95,14 @@ body {
 }
 
 .intro-text h4 {
-  font-size: 1.1rem;
+  font-size: 1.1rem; /* Adjust font size for readability */
   color: #e0e0e0;
   line-height: 1.6;
+  text-align: justify; /* Align text to distribute evenly */
+  text-justify: inter-word; /* Ensure proper spacing between words */
+  word-break: break-word; /* Prevent long words from overflowing */
+  hyphens: auto; /* Enable hyphenation for better formatting */
+  margin-bottom: 20px; /* Add space below the h4 */
 }
 
 .intro-text p {
@@ -88,6 +111,81 @@ body {
   font-size: 1.1rem;
   color: #e0e0e0;
 }
+
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
+  .about-intro {
+    gap: 20px; /* Reduce gap between elements */
+  }
+
+  .intro-content {
+    flex-direction: column; /* Stack image and text vertically */
+    text-align: center;
+  }
+
+  .intro-image img {
+    width: 80%; /* Scale image for medium screens */
+    margin: 0 auto;
+  }
+
+  .intro-text {
+    max-width: 90%; /* Adjust text width */
+  }
+
+  .intro-text h2 {
+    font-size: 2rem; /* Slightly smaller heading */
+  }
+
+  .intro-text p {
+    font-size: 1rem; /* Adjust paragraph size */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-intro {
+    margin-top: 20px; /* Add more space for smaller screens */
+  }
+
+  .intro-content {
+    flex-direction: column; /* Ensure stacking on smaller screens */
+    gap: 15px;
+  }
+
+  .intro-image img {
+    width: 90%; /* Larger image for small screens */
+  }
+
+  .intro-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .intro-text p {
+    font-size: 0.95rem; /* Adjust text size */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about-section {
+    padding: 10px; /* Reduce padding on smaller screens */
+  }
+
+  .intro-content {
+    gap: 10px;
+  }
+
+  .intro-image img {
+    width: 100%; /* Full width for extra small screens */
+  }
+
+  .intro-text h2 {
+    font-size: 1.6rem;
+  }
+
+  .intro-text p {
+    font-size: 0.9rem; /* Slightly smaller text for mobile */
+  }
+}
+
 
 
 /* Achievements Section */

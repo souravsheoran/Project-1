@@ -119,11 +119,11 @@ button:hover {
     .container {
         flex-direction: column; /* Stacks sections vertically on smaller screens */
         height: auto; /* Allows scrolling for smaller screens */
-        width: 90%; /* Adjusts width */
+        width: 90%; 
     }
 
     .form, .contact {
-        width: 100%; /* Full width for smaller screens */
+        width: 100%; 
         padding: 20px;
     }
 }

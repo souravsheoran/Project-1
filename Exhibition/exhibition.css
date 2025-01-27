@@ -15,25 +15,40 @@ body {
 #navbar {
     display: flex;
     justify-content: flex-end;
-    width: 100%;
-    font-size: medium;
+    width: 98%;
     z-index: 1000; 
+    font-size: medium;
     position: fixed;
-    /* background-color: #333; */
+    top: 0;
+    left: 0;
+    padding: 10px 20px;
 }
 
 #navbar a {
-    display: block;
     color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
     text-decoration: none;
-    transition: background-color 0.3s, color 0.3s;
+    padding: 10px 14px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 #navbar a:hover {
-    background-color: #555; /* Darker hover background */
-    color: #ffa500; /* Orange color on hover */
+    background-color: #555; 
+    color: #ffa500; 
+}
+
+@media screen and (max-width: 768px) {
+    #navbar {
+        flex-wrap: wrap; 
+        justify-content: center; 
+        padding: 10px;
+    }
+
+    #navbar a {
+        padding: 8px 10px; 
+        font-size: 14px; 
+    }
 }
 
 /* Container Styling */
@@ -44,21 +59,49 @@ body {
     text-align: center;
 }
 
-/* Header Box Styling */
 .header-box {
     padding: 20px;
     border-radius: 10px;
     display: inline-block;
     margin-bottom: 20px;
-}
-
-.header {
+    max-width: 100%; /* Prevent it from exceeding the screen width */
+    text-align: center; /* Center align for better responsiveness */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+  }
+  
+  .header {
     font-size: 2.5rem;
     color: #ffa500;
-    margin: 20px;
+    margin: 20px auto; /* Auto margin centers the header within the container */
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-}
-
+    word-wrap: break-word; /* Ensure long text wraps within the container */
+    max-width: 90%; /* Prevent the header text from stretching too wide */
+    line-height: 1.2; /* Adjust line height for readability */
+  }
+  
+  @media (max-width: 768px) {
+    .header {
+      font-size: 1.8rem; /* Reduce font size for smaller screens */
+      margin-top: 35px;
+    }
+  
+    .header-box {
+      padding: 35px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .header {
+      font-size: 1.5rem; /* Further reduce font size for very small screens */
+      margin-top: 70px;
+    }
+  
+    .header-box {
+      margin-bottom: 15px;
+      
+    }
+  }
+  
 /* Exhibitions List Styling */
 .exhibitions-list {
     list-style: none;
