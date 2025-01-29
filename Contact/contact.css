@@ -1,49 +1,49 @@
+/* General Reset */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #121212; /* Matches the dark tone */
-    color: #f2f2f2; /* Light text color */
-    height: 100vh; /* Full height */
+    background-color: #121212;
+    color: #f2f2f2;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden; /* Prevents unwanted horizontal scrolling */
 }
 
+/* Container */
 .container {
     display: flex;
-    flex-direction: row; /* Side-by-side layout */
+    flex-direction: row; /* Ensures side-by-side layout */
     justify-content: space-between;
     align-items: stretch;
-    width: 80%; /* Occupies most of the screen width */
-    height: 90vh; /* Occupies most of the screen height */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+    width: 80%;
+    max-width: 1000px;
+    min-height: 90vh;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
-    overflow: hidden; /* Prevents content overflow */
+    overflow: hidden;
+    background-color: #1e1e1e;
+    gap: 20px; /* Adds spacing between the cards */
 }
 
-.form {
-    width: 50%; /* Equal width for both sections */
+/* Form Section */
+.form, .contact {
+    width: 48%; /* Both sections take equal width with some spacing */
     padding: 30px;
-    background-color: #1e1e1e; /* Slightly lighter dark tone for contrast */
     display: flex;
     flex-direction: column;
     justify-content: center;
     box-sizing: border-box;
+    background-color: #252525; /* Slightly different shade for contrast */
+    border-radius: 10px;
 }
 
-.contact{
-    width:50%;
-    padding: 53px;
-    background-color: #1e1e1e; 
-    flex-direction:column;
-    margin-left: 20px;
-    align-items: center;
-}
-
+/* Headings */
 h2 {
-    color: #ff9800; /* Accent color */
+    color: #ff9800;
     text-align: center;
     margin-bottom: 15px;
     font-size: 24px;
@@ -56,14 +56,17 @@ h4 {
     color: #ffffff;
 }
 
-input[type="text"], input[type="email"], textarea {
+/* Input Fields */
+input[type="text"], 
+input[type="email"], 
+textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #333; /* Subtle border */
+    border: 1px solid #333;
     border-radius: 8px;
-    background-color: #2a2a2a; /* Input background */
-    color: #fff; /* Input text color */
+    background-color: #2a2a2a;
+    color: #fff;
     font-size: 14px;
     box-sizing: border-box;
     transition: border-color 0.3s ease;
@@ -71,20 +74,21 @@ input[type="text"], input[type="email"], textarea {
 
 input:focus, textarea:focus {
     outline: none;
-    border-color: #ff9800; /* Accent color for focus */
+    border-color: #ff9800;
 }
 
 textarea {
     resize: none;
-    height: 100px; /* Default height */
+    height: 100px;
 }
 
+/* Button */
 button {
     width: 100%;
     padding: 12px;
     border: none;
     border-radius: 8px;
-    background-color: #ff9800; /* Accent button color */
+    background-color: #ff9800;
     color: #fff;
     font-size: 16px;
     font-weight: bold;
@@ -93,10 +97,11 @@ button {
 }
 
 button:hover {
-    background-color: #e58900; /* Darker hover effect */
-    transform: scale(1.03); /* Slight enlarge */
+    background-color: #e58900;
+    transform: scale(1.03);
 }
 
+/* Contact Section Paragraphs */
 .contact p {
     line-height: 1.6;
     margin-bottom: 10px;
@@ -104,26 +109,67 @@ button:hover {
     color: #f2f2f2;
 }
 
+/* Contact Links */
 .contact p a {
-    color: #ff9800; /* Accent color for links */
+    color: #ff9800;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .contact p a:hover {
-    color: #e58900; /* Darker hover effect for links */
+    color: #e58900;
 }
 
-/* Responsiveness */
-@media (max-width: 768px) {
+/* Responsive Design */
+@media (max-width: 900px) {
     .container {
-        flex-direction: column; /* Stacks sections vertically on smaller screens */
-        height: auto; /* Allows scrolling for smaller screens */
-        width: 90%; 
+        flex-direction: column; /* Stacks sections vertically */
+        width: 90%;
+        height: auto; /* Allows content to expand */
+        gap: 20px; /* Keeps spacing between the cards */
     }
 
     .form, .contact {
-        width: 100%; 
+        width: 100%;
         padding: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        height: auto;
+        display: block;
+        padding: 20px;
+    }
+
+    .container {
+        flex-direction: column;
+        width: 100%;
+        min-height: auto;
+    }
+
+    .form, .contact {
+        width: 100%;
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h4 {
+        font-size: 16px;
+    }
+
+    input[type="text"], 
+    input[type="email"], 
+    textarea {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px;
     }
 }

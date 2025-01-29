@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Gallery | Amit Kapoor</title>
+    <link rel="stylesheet" href="video.css">
+</head>
+<body>
+    <nav id="navbar">
+        <a href="../index.html">Home</a>
+        <a href="../AboutUs/about.html">About Us</a>
+        <a href="../ArtWork/artwork.html">Artwork</a>
+        <a href="../Exhibition/exhibition.html">Exhibitions</a>
+        <a href="../WorkShop/workshop.html">Workshop</a>
+        <a href="../Video/video.html">Video</a>
+        <a href="../Contact/contact.html">Contact</a>
+    </nav>
+
+    <header id="header">
+        <h1>Video Gallery</h1>
+    </header>
+
+    <!-- Video Player Section (hidden by default) -->
+    <section id="video-player-section" class="video-player-section" style="display: none;">
+        <div class="video-container">
+            <iframe id="videoFrame" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-description">
+            <h3 id="videoTitle">Loading...</h3>
+            <p id="videoDescription">Please wait...</p>
+            <button onclick="showGallery()">Back to Gallery</button>
+        </div>
+    </section>
+
+    <!-- Video Gallery Section (Visible by default) -->
+    <section id="video-gallery-section" class="video-gallery">
+        <div class="video-cards-container">
+            <!-- Video Cards -->
+            <div class="video-card" onclick="loadVideo('I-Gp67XSDvQ', 'Watercolor Techniques', 'Explore the magic of watercolor blending and layering.', 'YOUR_IMAGE_LINK_HERE')">
+                <img src="Thumbnail1.jpg" alt="Watercolor Techniques" class="video-thumbnail">
+                <h3>Watercolor Techniques</h3>
+            </div>
+
+            <div class="video-card" onclick="loadVideo('hqnEWw-a4aQ', 'Watercolor Techniques', 'Explore the magic of watercolor blending and layering.', 'YOUR_IMAGE_LINK_HERE')">
+                <img src="Thumbnail2.jpg" alt="Watercolor Techniques" class="video-thumbnail">
+                <h3>Watercolor Techniques</h3>
+            </div>
+
+            <div class="video-card" onclick="loadVideo('GIa8X1olUbM', 'Watercolor Techniques', 'Explore the magic of watercolor blending and layering.', 'YOUR_IMAGE_LINK_HERE')">
+                <img src="Thumbnail3.jpg" alt="Watercolor Techniques" class="video-thumbnail">
+                <h3>Watercolor Techniques</h3>
+            </div>
+
+            <div class="video-card" onclick="loadVideo('lqucZgwDKvY', 'Watercolor Techniques', 'Explore the magic of watercolor blending and layering.', 'YOUR_IMAGE_LINK_HERE')">
+                <img src="Thumbnail4.jpg" alt="Watercolor Techniques" class="video-thumbnail">
+                <h3>Watercolor Techniques</h3>
+            </div>
+
+            <div class="video-card" onclick="loadVideo('lqucZgwDKvY', 'Watercolor Techniques', 'Explore the magic of watercolor blending and layering.', 'YOUR_IMAGE_LINK_HERE')">
+                <img src="Thumbnail1.jpg" alt="Watercolor Techniques" class="video-thumbnail">
+                <h3>Watercolor Techniques</h3>
+            </div>
+
+            <div class="video-card" onclick="loadVideo('MANVPDTTKuY', 'Watercolor Techniques', 'Explore the magic of watercolor blending and layering.', 'YOUR_IMAGE_LINK_HERE')">
+                <img src="Thumbnail1.jpg" alt="Watercolor Techniques" class="video-thumbnail">
+                <h3>Watercolor Techniques</h3>
+            </div>
+        </div>
+    </section>
+
+    <script src="video.js"> </script>
+</body>
+</html>

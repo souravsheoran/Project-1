@@ -8,3 +8,16 @@ window.addEventListener("scroll", () => {
         navbar.style.backgroundColor = 'transparent';
     }
 });
+
+function showMore() {
+    var moreExhibitions = document.getElementById("more-exhibitions");
+    var showMoreButton = document.getElementById("show-more");
+    
+    if (moreExhibitions.style.display === "none") {
+        moreExhibitions.style.display = "block";
+        showMoreButton.textContent = "Show Less";
+    } else {
+        moreExhibitions.style.display = "none";
+        showMoreButton.textContent = "Show More";
+    }
+}
