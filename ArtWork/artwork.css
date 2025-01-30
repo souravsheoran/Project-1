@@ -66,7 +66,7 @@ body {
   height: 100%;
   background-size: cover;
   background-position: center;
-  animation: slide-animation 10s infinite;
+  animation: slide-animation 8s infinite;
 }
 
 .slide:nth-child(1) {
@@ -75,26 +75,26 @@ body {
 
 .slide:nth-child(2) {
   background-image: url('Arts/Art2.jpg'); /* Replace with the actual path */
-  animation-delay: 3.33s; /* Offset timing for smooth transition */
+  animation-delay: 2.33s; /* Offset timing for smooth transition */
 }
 
 .slide:nth-child(3) {
   background-image: url('Arts/Art3.jpg'); /* Replace with the actual path */
-  animation-delay: 6.66s; /* Offset timing for smooth transition */
+  animation-delay: 5.66s; /* Offset timing for smooth transition */
 }
 
 .slide:nth-child(4) {
   background-image: url('Arts/Art4.jpg'); /* Replace with the actual path */
-  animation-delay: 9.99s; /* Offset timing for smooth transition */
+  animation-delay: 8.99s; /* Offset timing for smooth transition */
 }
 
 .slide:nth-child(5) {
   background-image: url('Arts/Art5.jpg'); /* Replace with the actual path */
-  animation-delay: 12.99s; /* Offset timing for smooth transition */
+  animation-delay: 10.99s; /* Offset timing for smooth transition */
 }
 .slide:nth-child(5) {
   background-image: url('Arts/Art25.jpg'); /* Replace with the actual path */
-  animation-delay: 14.99s; /* Offset timing for smooth transition */
+  animation-delay: 13.99s; /* Offset timing for smooth transition */
 }
 
 /* Keyframe animation for sliding effect */

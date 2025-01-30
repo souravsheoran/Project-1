@@ -27,10 +27,14 @@ window.addEventListener("scroll", () => {
 }
 
 // Function to go back to the gallery view
+// Function to go back to the gallery view
 function showGallery() {
     // Hide the video player section
     document.getElementById('video-player-section').style.display = 'none';
     
     // Show the video gallery
     document.getElementById('video-gallery-section').style.display = 'grid';
+    
+    // Stop the video by resetting the iframe src
+    document.getElementById('videoFrame').src = '';
 }
